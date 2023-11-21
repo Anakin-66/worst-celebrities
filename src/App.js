@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/details/:id" element={<CelebrityDetailPage />} />
-        <Route path="/celebrities" element={<Celebrities />} />
+        <Route path="/celebrities/:id" element={<Celebrities />} />
         <Route path="/random" element={<RandomCelebrity />} />
       </Routes>
     </BrowserRouter>

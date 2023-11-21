@@ -1,6 +1,8 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { shittyStars } from "../utils/stuff";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function HomePage () {
 
@@ -13,6 +15,12 @@ function HomePage () {
     })
 
     const lastThreeStars = choseByRedac.slice (-3);
+    
+    const { id } = useParams();
+
+    const celebritiesFound = mostRecentStars.find((celebs) =>{
+        return celebs.id == id
+    })
 
     return (
       <>
@@ -21,6 +29,9 @@ function HomePage () {
           return (
             <article>
               <h2> {p.name} </h2>
+              <Link to={`/celebrities/${p.id}`}>
+              <button>Click here</button>
+              </Link>
             </article>
           );
         })}
