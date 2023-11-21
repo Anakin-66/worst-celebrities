@@ -1,0 +1,38 @@
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import { shittyStars } from "../utils/stuff";
+
+function HomePage () {
+
+    const mostRecentStars = shittyStars.sort((a, b) => { 
+      return new Date(b.publishedAt) - new Date(a.publishedAt);
+    })
+
+    const choseByRedac = shittyStars.filter((chosen) => {
+      return chosen.isPickedByTeam === true;
+    })
+
+    const lastThreeStars = choseByRedac.slice (-3);
+
+    return (
+      <>
+      <Header />
+        {mostRecentStars.map ((p) =>{
+          return (
+            <article>
+              <h2> {p.name} </h2>
+            </article>
+          );
+        })}
+        {lastThreeStars.map ((p) =>{
+          return (
+            <p> {p.name} a été choisi par la rédac</p>
+          )
+        })}
+      <Footer />
+      </>
+    );
+  }
+  
+  export default HomePage;
+  
