@@ -4,6 +4,7 @@ import Celebrities from "./pages/Celebrities";
 import CelebrityDetailPage from "./pages/CelebrityDetailPage";
 import RandomCelebrity from "./pages/RandomCelebrity";
 import TvSpeakersPages from "./pages/TvSpeakersPage";
+import CopyrightPage from "./pages/CopyrightPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/celebrities/:id" element={<Celebrities />} />
         <Route path="/random" element={<RandomCelebrity />} />
         <Route path="/tvspeakers" element={<TvSpeakersPages />} />
+        <Route path="/copyright" element={<CopyrightPage />} />
       </Routes>
     </BrowserRouter>
    
