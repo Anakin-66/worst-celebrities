@@ -23,6 +23,15 @@ function Header({ currentPage }) {
               <Link to="/random">Célebrité aléatoire</Link>
             )}
           </li>
+          <li>
+            {currentPage === "speakers" ? (
+              <strong>
+                <Link to="/tvspeakers">Présentateurs TV</Link>
+              </strong>
+            ) : (
+              <Link to="/tvspeakers">Présentateurs TV</Link>
+            )}
+          </li>
         </ul>
       </nav>
     </header>
