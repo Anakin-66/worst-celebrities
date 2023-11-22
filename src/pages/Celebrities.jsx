@@ -7,7 +7,7 @@ function Celebrities () {
 
     return (
         <>
-        <Header />
+        <Header/>
         {shittyStars.map ((allStars) => {
             return (
                 <Link to={`/details/${allStars.id}`}>

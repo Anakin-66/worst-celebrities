@@ -12,7 +12,7 @@ function RandomCelebrity () {
 
     return (
         <>
-        <Header />
+        <Header currentPage="random" />
         <CelebrityDetails celebritiesInfos={randomCelebrity} />
         <Footer />
         </>

@@ -18,13 +18,13 @@ function HomePage () {
     
     const { id } = useParams();
 
-    const celebritiesFound = mostRecentStars.find((celebs) =>{
+      mostRecentStars.find((celebs) =>{
         return celebs.id == id
     })
 
     return (
       <>
-      <Header />
+      <Header currentPage="home" />
         {mostRecentStars.map ((p) =>{
           return (
             <article>
