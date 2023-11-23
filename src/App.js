@@ -6,6 +6,7 @@ import RandomCelebrity from "./pages/RandomCelebrity";
 import TvSpeakersPages from "./pages/TvSpeakersPage";
 import CopyrightPage from "./pages/CopyrightPage";
 import FormMessagePage from "./pages/FormMessagePage";
+import LikesPages from "./pages/LikesPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/tvspeakers" element={<TvSpeakersPages />} />
         <Route path="/copyright" element={<CopyrightPage />} />
         <Route path="/form" element={<FormMessagePage />} />
+        <Route path="/likes" element={<LikesPages />} />
       </Routes>
     </BrowserRouter>
    
