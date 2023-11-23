@@ -1,20 +1,36 @@
 import { useState } from "react";
 
 function LikesPages () {
-    // Je déclare mon hook React useState qui va éviter que la fonction se reset à 0 à chaque exécutions et je le déclare à 0 par défaut. Je déclare ensuite ma variable et ma fonction
+
     const [likes, setLikesNumber] = useState(0);
-    // Je déclare une fonction qui est lié à l'eventListener fournis par React pour le lié au onClick
+    const [displayMessage, setDisplayMessage] = useState(false);
+   
     const handleOnClick = () => {
-    // Je récupère ma fonction setLikesNumber et je l'auto incrèmente à ma variable pour que à chaque cliques ma variable fasse +1.
+  
+        if (likes < 5) {
         setLikesNumber(likes + 1);
-    }
+    
+        } else {
+            setDisplayMessage(true);
+        }   
+    };
+
+    const handleCloseMessage = () => {
+        setDisplayMessage(false);
+      };
 
     return (
         <main>
-            {/* Je déclare l'eventListener onClick dans le buton, une fonction qui est fournis par REACT et qui est propre à REACT */}
+
+          
             <button onClick={handleOnClick} >Like</button>
-            {/* Pour finir je met ma variable qui sera mis à jour à chaque clique */}
             <p>Vous avez liké {likes} fois</p>
+            {displayMessage && (
+            <div>
+                <p>Vous avez like plus de 5 fois</p>
+                <button onClick={handleCloseMessage}>Fermer</button>
+            </div>
+            )}
         </main>
     )
 }
