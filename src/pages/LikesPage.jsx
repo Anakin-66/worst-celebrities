@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function LikesPages () {
-    // Je déclare mon hook React useState et je le déclare à 0 par défaut. Je déclare ensuite ma variable et ma fonction
+    // Je déclare mon hook React useState qui va éviter que la fonction se reset à 0 à chaque exécutions et je le déclare à 0 par défaut. Je déclare ensuite ma variable et ma fonction
     const [likes, setLikesNumber] = useState(0);
     // Je déclare une fonction qui est lié à l'eventListener fournis par React pour le lié au onClick
     const handleOnClick = () => {
